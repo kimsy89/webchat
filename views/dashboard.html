@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WEB CHAT - dashboard</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/public/css/chat.css">
+    <link rel="stylesheet" href="/public/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="/public/font/css/font-awesome.min.css">
+    <!-- endinject -->
+  </head>
+
+  <body id="dashboard" data-email-id="<%= email %>" data-name="<%= name %>">
+    <main class="row-wrap">
+      <section id="user">
+        <div class="header row-wrap">
+          <div class="left row">
+            <h2 class="my-info">
+              <span class="icon face"><i class="fa fa-user"></i></span>
+              <span class="name mine"><%= name %></span>
+            </h2>
+          </div>
+          <div class="right row">
+          </div>
+        </div>
+        <div class="list">
+          <form method="get" action="chat/room" id="request-chat">
+            <ul id="online-users"></ul>
+          </form>
+        </div>
+      </section>
+
+      <section id="room">
+        <div class="ajax-area"></div>
+      </section>
+    </main>
+    
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/public/js/lib/socket.io.js"></script>
+    <!-- inject:js -->
+    <script src="/public/js/chat-init.js"></script>
+    <script src="/public/js/chat.js"></script>
+    <script src="/public/js/lib/jquery-ui.min.js"></script>
+    <!-- endinject -->
+
+  </body>
+</html>

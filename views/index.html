@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WEB CHAT - login</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/public/css/chat.css">
+    <link rel="stylesheet" href="/public/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="/public/font/css/font-awesome.min.css">
+    <!-- endinject -->
+  </head>
+  <body id="login">
+    <section id="login-box">
+      <h1>LOGIN</h1>
+      <form method="post" action="/chat/dashboard/">
+        <input type="text" id="user-name" placeholder="Input your name" name="name" required/><br/>
+        <input type="email" id="user-email" placeholder="Input your email" name="email" required/>
+        <button type="submit">Enter</button>
+      </form>
+    </section>
+    
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $('input[type=text]').first().focus();
+    </script>
+  </body>
+</html>
